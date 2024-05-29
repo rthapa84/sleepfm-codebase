@@ -3,7 +3,7 @@
 # Activate the conda environment 
 source activate sleepfm_env
 
-epochs=1
+epochs=20
 lr=1e-3
 lr_step_period=5
 
