@@ -77,7 +77,7 @@ Note: These evaluation results will not match the ones that we have in our paper
 
 ## Model Checkpoint
 
-We provide one of our model checkpoints inside the sleepfm/checkpoint folder. You can load the model as shown in the sleepfm/3_generate_embed_pretraining.py script. Follow all the other steps, but skip the sleepfm/2_pretrain.py step if you use this checkpoint. Ensure that you set the paths correctly in the sleepfm/config.py file.
+We provide one of our model checkpoints inside the `sleepfm/checkpoint` folder. You can load the model as shown in the `sleepfm/3_generate_embed_pretraining.py` script. Follow all the other steps, but skip the `sleepfm/2_pretrain.py` step if you use this checkpoint. Ensure that you set the paths correctly in the `sleepfm/config.py` file.
 
 **Note that this is a really small model. We are currently working on a larger version with some architectural improvements and trained on more data. We will be releasing the codebase and model for that soon as well. Stay tuned!👀**
 
