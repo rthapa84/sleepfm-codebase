@@ -21,7 +21,6 @@ from config import (CONFIG, CHANNEL_DATA,
 
 from dataset import EventDataset as Dataset 
 
-
 @click.command("generate_eval_embed")
 @click.argument("output_file", type=click.Path())
 @click.option("--dataset_dir", type=str, default=None)
@@ -40,12 +39,7 @@ def generate_eval_embed(
     if dataset_dir == None:
         dataset_dir = PATH_TO_PROCESSED_DATA
 
-    if "pairwise" in output_file:
-        mode = "pairwise"
-    elif "leave_one_out" in output_file:
-        mode = "leave_one_out"
-
-    output_dir = os.path.join(dataset_dir, f"outputs/{output_file}")
+    output_dir = os.path.join(dataset_dir, f"{output_file}")
 
     device = torch.device("cuda")
     splits = splits.split(",")
@@ -113,7 +107,7 @@ def generate_eval_embed(
         
         emb = list(map(torch.concat, emb))
         dataset_prefix = dataset_file.split(".")[0]
-        with open(os.path.join(path_to_save, f"{dataset_prefix}_{mode}_{split}_emb.pickle"), 'wb') as file:
+        with open(os.path.join(path_to_save, f"{dataset_prefix}_{split}_emb.pickle"), 'wb') as file:
             pickle.dump(emb, file)
 
 

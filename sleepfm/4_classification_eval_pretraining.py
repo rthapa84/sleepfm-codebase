@@ -37,8 +37,8 @@ def main(args):
         dataset_dir = PATH_TO_PROCESSED_DATA
 
     output_file = args.output_file
-    path_to_output = os.path.join(dataset_dir, f"outputs/{output_file}")
-
+    path_to_output = os.path.join(dataset_dir, f"{output_file}")
+    breakpoint()
     modality_type = args.modality_type
     num_per_event = args.num_per_event
     model_name = args.model_name
@@ -54,14 +54,9 @@ def main(args):
     dataset_file = "dataset.pickle"
     dataset_event_file = "dataset_events_-1.pickle"
 
-    if "leave_one_out" in path_to_output:
-        mode = "leave_one_out"
-    elif "pairwise" in path_to_output:
-        mode = "pairwise"
-
-    test_emb_file = f"dataset_events_-1_{mode}_test_emb.pickle"
-    valid_emb_file = f"dataset_events_-1_{mode}_valid_emb.pickle"
-    train_emb_file = f"dataset_events_-1_{mode}_train_emb.pickle"
+    test_emb_file = f"dataset_events_-1_test_emb.pickle"
+    valid_emb_file = f"dataset_events_-1_valid_emb.pickle"
+    train_emb_file = f"dataset_events_-1_train_emb.pickle"
 
     logger.info(f"modality_type: {modality_type}")
     logger.info(f"dataset_file: {dataset_file}")

@@ -75,6 +75,12 @@ Note: These evaluation results will not match the ones that we have in our paper
   - Finally, this script trains a logistic regression model and calculates performance metrics such as AUROC and AUPRC.
 
 
+## Model Checkpoint
+
+We provide one of our model checkpoints inside the sleepfm/checkpoint folder. You can load the model as shown in the sleepfm/3_generate_embed_pretraining.py script. Follow all the other steps, but skip the sleepfm/2_pretrain.py step if you use this checkpoint. Ensure that you set the paths correctly in the sleepfm/config.py file.
+
+**Note that this is a really small model. We are currently working on a larger version with some architectural improvements and trained on more data. We will be releasing the codebase and model for that soon as well. Stay tuned!👀**
+
 ## BibTeX
 
 ```bibtex
@@ -88,13 +94,4 @@ Note: These evaluation results will not match the ones that we have in our paper
 
 ## 🪪 License
 
-MIT License
-
-Copyright 2024 by the author(s)
-
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-
+[MIT License](LICENSE)
